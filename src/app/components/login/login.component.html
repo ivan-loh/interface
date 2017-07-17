@@ -1,0 +1,23 @@
+<div class="login-wrapper">
+
+  <form class="login" (submit)="onSubmit($event)">
+
+    <label class="title">
+      <h3 class="welcome">Welcome to</h3>
+      Company Product Name
+    </label>
+
+    <div class="login-group">
+
+      <input name="username" [(ngModel)]="username" class="username" type="text"     placeholder="Email">
+      <input name="password" [(ngModel)]="password" class="password" type="password" placeholder="Password">
+
+      <div *ngIf="loginError !== ''" class="error active">Invalid user name or password</div>
+      <button type="submit" class="btn btn-primary">NEXT</button>
+      <a [routerLink]="['', 'register']" class="signup">Sign up for an Account</a>
+
+    </div>
+
+  </form>
+
+</div>
